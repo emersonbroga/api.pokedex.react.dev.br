@@ -18,11 +18,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', (req, res) => {
-  return res.send(`Api is running on port ${PORT}!`);
+  return res.send(`Api is running at port ${BASE_URL}!`);
 });
 
 app.listen(PORT, () => {
-  console.log(`Api is running on port ${BASE_URL}!`);
+  console.log(`Api is running at port ${BASE_URL}!`);
 });
 
 app.use((error, req, res, next) => {
